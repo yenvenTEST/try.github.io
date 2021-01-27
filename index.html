@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        
+        div{
+            height: 150px;
+            border-radius: 15px;
+            
+            
+        }
+    </style>
+    <title>Color chainging cool</title>
+</head>
+<body style="background-color: gray;">
+    
+    <input type="button" value="swap" onclick="swap();" style="background-color: lightgreen;" >
+    
+    <div id="first"></div>
+    <div id="second"></div>
+    <div id="third"></div>
+    <div id="fourth"></div>
+    <div id="fifth"></div>
+
+    
+
+    <script>
+        var colors = ["red" , "green", "blue", "yellow" , "black"];
+        
+
+       
+        document.getElementById('first').style.backgroundColor = colors[0];
+        document.getElementById('second').style.backgroundColor = colors[1];
+        document.getElementById('third').style.backgroundColor = colors[2];
+        document.getElementById('fourth').style.backgroundColor = colors[3];
+        document.getElementById('fifth').style.backgroundColor = colors[4];
+
+        function swap()
+        {
+            if (document.getElementById('first').style.backgroundColor == colors[0]){
+            document.getElementById('first').style.backgroundColor = colors[1];
+            document.getElementById('second').style.backgroundColor = colors[2];
+            document.getElementById('third').style.backgroundColor = colors[3];
+            document.getElementById('fourth').style.backgroundColor = colors[4];
+            document.getElementById('fifth').style.backgroundColor = colors[0];
+
+            }
+            else if (document.getElementById('first').style.backgroundColor == colors[1]){
+            document.getElementById('first').style.backgroundColor = colors[2];
+            document.getElementById('second').style.backgroundColor = colors[3];
+            document.getElementById('third').style.backgroundColor = colors[4];
+            document.getElementById('fourth').style.backgroundColor = colors[0];
+            document.getElementById('fifth').style.backgroundColor = colors[1];
+            }
+            else if (document.getElementById('first').style.backgroundColor == colors[2]){
+            document.getElementById('first').style.backgroundColor = colors[3];
+            document.getElementById('second').style.backgroundColor = colors[4];
+            document.getElementById('third').style.backgroundColor = colors[0];
+            document.getElementById('fourth').style.backgroundColor = colors[1];
+            document.getElementById('fifth').style.backgroundColor = colors[2];
+            }
+            else if (document.getElementById('first').style.backgroundColor == colors[3]){
+            document.getElementById('first').style.backgroundColor = colors[4];
+            document.getElementById('second').style.backgroundColor = colors[0];
+            document.getElementById('third').style.backgroundColor = colors[1];
+            document.getElementById('fourth').style.backgroundColor = colors[2];
+            document.getElementById('fifth').style.backgroundColor = colors[3];
+            }
+            else if (document.getElementById('first').style.backgroundColor == colors[4]){
+            document.getElementById('first').style.backgroundColor = colors[0];
+            document.getElementById('second').style.backgroundColor = colors[1];
+            document.getElementById('third').style.backgroundColor = colors[2];
+            document.getElementById('fourth').style.backgroundColor = colors[3];
+            document.getElementById('fifth').style.backgroundColor = colors[4];
+            }
+
+        }
+
+        
+
+    </script>
+    
+    
+</body>
+</html>

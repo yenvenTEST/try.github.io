@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table class="table" id="mytable"  >
+
+    </table>
+    
+    
+    <style>
+        .th{ 
+            width: 100px;
+            height: 100px;
+            
+            border: solid black 1px;
+            
+            
+        }
+        .table{
+            border: 5px solid black;
+            border-collapse: collapse;
+            
+        }
+        
+        
+
+    </style>
+     <script>
+
+        var table = [{tre:true}, object2 = { tre:false}, object3 = {tre:true} , object4 = {tre:false}, object5 = {tre:true} , object6  = {tre:false}, object7 ={tre:true} , object8 = {tre:false}, object9 = {tre:true}, object10 ={tre:false}]
+
+        var str = "<table>"
+
+        
+        for (i in table)
+        {
+            
+            //var row = element.insertRow(i);
+            str += "<tr></tr>"
+            
+            for (j in table){
+                
+                //var cell1 = row.insertCell(j);
+                //cell1.style.height = '100px';
+                //cell1.style.width  = '100px';
+                //cell1.style.backgroundColor = 'black';
+                if (table[j].tre == true && i==j) {
+                    str += '<th class="th"; style="background-color: blue; "></th>'
+                }
+                else
+                    str += '<th class="th";></th>'
+
+                
+            }
+            
+        }
+        document.getElementById("mytable").innerHTML = str; 
+
+    </script>
+</body>
+</html>
